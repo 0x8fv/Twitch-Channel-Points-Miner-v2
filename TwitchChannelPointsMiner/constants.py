@@ -170,18 +170,15 @@ class GQLOperations:
             }
         },
     }
-    UserByLogin = {
-        "operationName": "UserByLogin",
+    GetIDFromLogin = {
+        "operationName": "GetIDFromLogin",
         "variables": {"login": None},
-        "query": """
-            query UserByLogin($login: String!) {
-                user(login: $login) {
-                    id
-                    login
-                    displayName
-                }
+        "extensions": {
+            "persistedQuery": {
+                "version": 1,
+                "sha256Hash": "94e82a7b1e3c21e186daa73ee2afc4b8f23bade1fbbff6fe8ac133f50a2f58ca",
             }
-        """,
+        },
     }
     PersonalSections = (
         {

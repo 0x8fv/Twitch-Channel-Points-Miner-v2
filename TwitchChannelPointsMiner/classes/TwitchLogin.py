@@ -341,7 +341,7 @@ class TwitchLogin(object):
         return user_id
 
     def __set_user_id(self):
-        json_data = copy.deepcopy(GQLOperations.UserByLogin)
+        json_data = copy.deepcopy(GQLOperations.GetIDFromLogin)
         json_data["variables"]["login"] = self.username
         response = self.session.post(GQLOperations.url, json=json_data)
 

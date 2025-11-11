@@ -200,7 +200,7 @@ class Twitch(object):
                 streamer.set_offline()
 
     def get_channel_id(self, streamer_username):
-        json_data = copy.deepcopy(GQLOperations.UserByLogin)
+        json_data = copy.deepcopy(GQLOperations.GetIDFromLogin)
         json_data["variables"]["login"] = streamer_username
         json_response = self.post_gql_request(json_data)
         if (
