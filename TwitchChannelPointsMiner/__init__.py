@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-__version__ = "2.0.6"
+__version__ = "2.0.6.1"
 from .TwitchChannelPointsMiner import TwitchChannelPointsMiner
 
 __all__ = [

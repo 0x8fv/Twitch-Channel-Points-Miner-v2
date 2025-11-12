@@ -314,11 +314,12 @@ class TwitchChannelPointsMiner:
                 streamer.channel_points for streamer in self.streamers
             ]
 
+            streamer_label = "Streamer" if len(self.streamers) == 1 else "Streamers"
             logger.info(
-                f"{len(self.streamers)} Streamers loaded!",
+                f"{len(self.streamers)} {streamer_label} loaded!",
                 extra={"emoji": ":white_check_mark:"},
-            )        
-            
+            )
+
             # If we have at least one streamer with settings = make_predictions True
             make_predictions = at_least_one_value_in_settings_is(
                 self.streamers, "make_predictions", True
@@ -426,7 +427,7 @@ class TwitchChannelPointsMiner:
     def end(self, signum, frame):
         if not self.running:
             return
-        
+
         logger.info("CTRL+C Detected! Please wait just a moment!")
 
         for streamer in self.streamers:
