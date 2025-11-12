@@ -314,6 +314,11 @@ class TwitchChannelPointsMiner:
                 streamer.channel_points for streamer in self.streamers
             ]
 
+            logger.info(
+                f"{len(self.streamers)} Streamers loaded!",
+                extra={"emoji": ":white_check_mark:"},
+            )        
+            
             # If we have at least one streamer with settings = make_predictions True
             make_predictions = at_least_one_value_in_settings_is(
                 self.streamers, "make_predictions", True
