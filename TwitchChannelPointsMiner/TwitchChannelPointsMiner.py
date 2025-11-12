@@ -315,7 +315,7 @@ class TwitchChannelPointsMiner:
             ]
 
             logger.info(
-                f"{len(self.streamers)} Streamers loaded",
+                f"{len(self.streamers)} Streamers loaded!",
                 extra={"emoji": ":white_check_mark:"},
             )        
             
@@ -324,7 +324,6 @@ class TwitchChannelPointsMiner:
                 self.streamers, "make_predictions", True
             )
 
-            
             # If we have at least one streamer with settings = claim_drops True
             # Spawn a thread for sync inventory and dashboard
             if (
