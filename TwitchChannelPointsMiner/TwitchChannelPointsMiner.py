@@ -165,6 +165,8 @@ class TwitchChannelPointsMiner:
         )
         logger.info("https://github.com/0x8fv/Twitch-Channel-Points-Miner-v2")
 
+        logger.warning("Newer and better version available: https://github.com/0x8fv/Twitch-Channel-Points-Miner")
+
         if github_version == "0.0.0":
             logger.error(
                 "Unable to detect if you have the latest version of this script"
